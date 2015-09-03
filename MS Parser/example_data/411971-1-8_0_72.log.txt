@@ -1,0 +1,76 @@
+Processing Computer Name: DNATECH
+Instrument Method: C:\Xcalibur\methods\oligo_htcs
+Processing Method: C:\Xcalibur\methods\oligo_htcs
+Spectral Quality Indicators:
+Average Noise Level (counts) = 13.6
+Maximum spectrum S/N = 1201.7
+% of TIC in baseline = 22.9
+
+Deconvolution Parameters:
+Parameter File = C:\Program Files\ProMassXcali\znova\znova.params
+Adduct Ion Mass = -1.0079
+Data Type = profile
+Comprehensive Deconvolution Mode = 1
+Peak Width = 2
+Merge Width = 0.3
+Score Normalization Charge State = 1
+First m/z = 592.1
+Last m/z = 1325.2
+Minimum Deconvoluted Mass (Da) = 1000.0
+Maximum Deconvoluted Mass (Da) = 10700.0
+Smooth Width = 5
+Number of Smooths = 2
+%Relative Intensity Threshold = 0
+Minimum Score = 2
+Actual Number of Components Found = 18
+Actual Number of Iterations Performed = 501
+ZNova Processing Time (sec) = 2.81
+Exclusion Masses = 
+
+Display Parameters:
+Centroid Plot = 0
+Image Format = gif
+Graph Size, X (pixels) = 800
+Graph Size, Y (pixels) = 600
+Zoom Range = 500
+Decon Spectrum Label Mode = Components
+Spectrum Label Threshold = 1 %
+Logo Filename = C:\Program Files\ProMassXcali\ZNova\logo.jpg
+Directory Format = raw
+Results Directory = C:\Xcalibur\data\Novatia\200815\p1\promass_results
+Auto Processing Report Template = C:\Program Files\ProMassXcali\templates\auto_proc_dnatech_v3.html
+Summary Report Template = C:\Program Files\ProMassXcali\templates\summary_dnatech_v3.html
+
+Noise and Data Reduction Parameters:
+Filter Data = 1
+Baseline Correction Factor = 0.7
+S/N Threshold = 2
+Top N Data Points = 502
+
+Reporting Parmeters:
+Use Excel Summary = No
+UV Delay = -0.08
+UV Trace Label = LC/UV 260 nm
+Analog Detector Delay = -0.08
+Analog Detector Trace Label = LC/UV 260 nm
+Chromatogram Display Mode = All
+MS Intensity Peak Selection Threshold = 0
+Area % Peak Selection Threshold = 0
+Background Subtract Region 1 Start RT = 0
+Background Subtract Region 1 End RT = 0
+Background Subtract Region 2 Start RT = 0
+Background Subtract Region 2 End RT = 0
+Show Sample Plate = Yes
+Sample Plate Rows = 8
+Sample Plate Columns = 12
+Sample Plate Direction = Across
+
+Target Mass Parameters:
+Mass Type = Avg
+Mass Tolerance = 0.025 %
+Minimum Mass Tolerance = 3 Da
+Minimum Target Intensity = 200
+Show BioSequence = Yes
+Impurity Threshold = 30 %
+Use Cumulative Impurity Levels = Yes
+

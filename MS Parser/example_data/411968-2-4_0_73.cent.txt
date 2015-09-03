@@ -1,0 +1,21 @@
+Mass Peak List Sorted by Intensity:
+Mass(Da)    +- Std. Dev.    Intensity    Score    Delta Mass   %Relative   %Total   Presumed Identity
+ 15310.8         1.1        1.27E+004    14.21         0.0       100.00     79.73     Target Mass: 15308.9, C1-C50
+ 15331.0         0.7        1.38E+003     7.49        20.2       10.89      8.69     15308.9 (*na adduct)
+ 15362.9         1.0        7.16E+002     4.31        52.1        5.66      4.51     15308.9 (plus cyanoethyl), or 15308.9 (plus dmf)
+ 15456.5         0.8        3.92E+002     3.80       145.7        3.10      2.47     
+ 15196.7         0.6        2.34E+002     4.27      -114.1        1.85      1.47     15308.9 (C depyrimidination)
+ 15175.7         1.1        1.95E+002     2.86      -135.1        1.54      1.23     
+ 14575.8         1.8        1.60E+002     4.42      -735.0        1.27      1.01     
+ 15432.5         0.9        1.42E+002     3.41       121.7        1.12      0.90     
+
+Mass Peak List Sorted by Mass:
+Mass(Da)    +- Std. Dev.    Intensity    Score    Delta Mass   %Relative   %Total   Presumed Identity
+ 14575.8         1.8        1.60E+002     4.42      -735.0        1.27      1.01     
+ 15175.7         1.1        1.95E+002     2.86      -135.1        1.54      1.23     
+ 15196.7         0.6        2.34E+002     4.27      -114.1        1.85      1.47     15308.9 (C depyrimidination)
+ 15310.8         1.1        1.27E+004    14.21         0.0       100.00     79.73     Target Mass: 15308.9, C1-C50
+ 15331.0         0.7        1.38E+003     7.49        20.2       10.89      8.69     15308.9 (*na adduct)
+ 15362.9         1.0        7.16E+002     4.31        52.1        5.66      4.51     15308.9 (plus cyanoethyl), or 15308.9 (plus dmf)
+ 15432.5         0.9        1.42E+002     3.41       121.7        1.12      0.90     
+ 15456.5         0.8        3.92E+002     3.80       145.7        3.10      2.47     

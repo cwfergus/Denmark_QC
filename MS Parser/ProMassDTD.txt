@@ -1,0 +1,166 @@
+XML Output File
+
+ProMass automatically writes an XML summary file during automatic processing.  
+The file is called promass_results.xml and is written to the results directory.  
+The XML file contains all the relevant information about each sample processed from the Xcalibur sample list.  
+The XML file represents a convenient way to import ProMass results into a database. 
+ An example annotated XML file is included with the installation in the ProMass install directory so that you can see 
+ what a typical ProMass XML output file would look like.  See the file called promass_annotated.xml.  
+ The file is reproduced below, with the comments about each XML element or node shown in green text.
+
+ 
+
+<?xml version='1.0' standalone='yes'?>
+<!--PROMASS_RESULTS is the root node of document
+The following elements are not optional and should always be present:
+DATA_FILE - one or more
+    CHROM_PEAK - one or more, including all CHROM_PEAK children
+    COLOR_CODE
+    DATA_PATH
+    DETECTOR_TYPE
+    MS_CHROM_GRAPHIC
+    PROC_METHOD
+    RESULTS_PATH
+    RESULT_CODE
+PROCESSING_COMPUTER_NAME
+PROCESSING_DATE_TIME
+VERSION
+
+All other elements are optional, depending on the how the sample list was configured during processing.
+The following optional DATA_FILE children can appear more than once:
+    TARGET_MASS - one or more target masses with all TARGET_MASS children
+    SEQ_LADDER - one or more found sub-sequence masses with all SEQ_LADDER children
+-->
+<PROMASS_RESULTS>
+    <!--Information about each sample is accessed from its DATA_FILE element.
+    The NAME attribute is the data file name from the sample list (does not include
+    path, see DATA_PATH). The ID attribute is the vial or well position, but does not include
+    tray information.  There may be multiple DATA_FILE elements, depending on how many files
+    were processed.-->
+    <DATA_FILE ID="1" NAME="oligo01">
+        <!--Acquisition date, the date the .raw file was acquired on the MS system-->
+     <ACQ_DATE>1/10/2008</ACQ_DATE>
+        <!--AD_CHROM_GRAPHIC is an element of DATA_FILE, which is the name of the graphic file for the Analog Device chromatogram
+        This element may only be present if the UV signal is acquired thru an ADC such as the SS420X-->
+        <AD_CHROM_GRAPHIC>oligo01_ad.png</AD_CHROM_GRAPHIC>
+        <!--BIOSEQUENCE element is the BioSequence string from the sample list-->
+        <BIOSEQUENCE>CCGGGGTGACCACACAGC</BIOSEQUENCE>
+        <!--CHROM_PEAK elements represent information from each chromatographic peak and associated spectrum.
+        The RT attribute represents the retention time of each chromatographic peak.
+        Multiple CHROM_PEAK children are possible-->
+        <CHROM_PEAK RT="0.29">
+            <!--AREA_PERCENT of the chromatographic peak, 0-100-->
+            <AREA_PERCENT>100.00</AREA_PERCENT>
+            <!--BASE_PEAK_INTENSITY, MS intensity of the highest peak in the deconvoluted spectrum-->
+            <BASE_PEAK_INTENSITY>2.45E+005</BASE_PEAK_INTENSITY>
+            <!--BASE_PEAK_MASS, The deconvoluted mass with the highest intensity in the deconvoluted spectrum-->
+            <BASE_PEAK_MASS>5494.3</BASE_PEAK_MASS>
+            <!--DECON_DATA, name of the raw deconvolution mass-intensity data file-->
+            <DECON_DATA>oligo01_0_29.dec</DECON_DATA>
+            <!--DECON_PEAK_REPORT, name of the centroids peak list file-->
+            <DECON_PEAK_REPORT>oligo01_0_29.cent.txt</DECON_PEAK_REPORT>
+            <!--DEC_GRAPHIC, name of the deconvoluted spectrum graphic file-->
+            <DEC_GRAPHIC>oligo01_0_29.dec.png</DEC_GRAPHIC>
+            <!--ESI_GRAPHIC, name of the ESI spectrum graphic file-->
+            <ESI_GRAPHIC>oligo01_0_29.png</ESI_GRAPHIC>             
+            <!--LOG_FILE, name of the deconvolution log file-->
+            <LOG_FILE>oligo01_0_29.log.txt</LOG_FILE>
+            <!--PEAK_AREA, the integrated area of the chromatogrphic peak-->
+            <PEAK_AREA>2.08E+007</PEAK_AREA>
+            <!--SPECTRAL_QUALITY, a string indicating the quality of the deconvoluted spectrum-->
+            <SPECTRAL_QUALITY>ok</SPECTRAL_QUALITY>
+            <!--ZOOM_GRAPHIC, name of the zoom deconvoluted spectrum graphic file-->
+            <ZOOM_GRAPHIC>oligo01_0_29.zdec.png</ZOOM_GRAPHIC>
+        </CHROM_PEAK>
+        <!--CLIENT, the client field from the sample list-->
+        <CLIENT>Oligos-R-Us</CLIENT>
+        <!--COLOR_CODE, overall color code for the data set - cyan, red, orange, purple, blue or green.
+        Note this color code may be different than individual target mass color codes, because the
+        overall color code represents the best color observed for all target masses-->
+        <COLOR_CODE>green</COLOR_CODE>
+        <!--COMMENT, comment entered in the sample list at run time-->
+        <COMMENT>Oh, what a wonderful XML format</COMMENT>
+        <!--DATA_PATH, the path to the original MS (.raw) data file-->
+        <DATA_PATH>C:\Program Files\ProMassXcali\TestData\oligos</DATA_PATH>
+        <!--DETECTOR_TYPE, the type of detector used for peak detection in the processing method
+        usually LC/MS, but could also be LC/UV-->
+        <DETECTOR_TYPE>LC/MS</DETECTOR_TYPE>
+        <!--INJ_VOL, injection volume from the sample list-->
+        <INJ_VOL>25</INJ_VOL> 
+        <!--INST_METHOD, the instrument method file from the sample list-->
+        <INST_METHOD>C:\Xcalibur\methods\oligo_htcs</INST_METHOD>
+        <!--MS_CHROM_GRAPHIC, name of the graphic file for the MS chromatogram-->
+        <MS_CHROM_GRAPHIC>oligo01_ms.png</MS_CHROM_GRAPHIC>
+        <!--POSITION, vial position from the sample list, does not include tray-->
+        <POSITION>1</POSITION>
+        <!--PROC_METHOD, processing method file including path (does not include .pmd extension)-->
+        <PROC_METHOD>C:\Program Files\ProMassXcali\TestData\oligos\oligo</PROC_METHOD>
+        <!--RESULTS_PATH, directory where promass results for this data file were written to-->
+        <RESULTS_PATH>C:\Program Files\ProMassXcali\TestData\oligos\promass_results</RESULTS_PATH>
+        <!--RESULT_CODE, overall result code index for the data file, -1=cyan, 0=red, 1=orange, 2=purple, 3=blue, 4=green-->
+        <RESULT_CODE>4</RESULT_CODE>
+        <!--SAMPLE_ID, Sample ID from the sample list-->
+        <SAMPLE_ID>test oligo 01</SAMPLE_ID>
+        <!--SAMPLE_NAME, Sample Name from the sample list-->
+        <SAMPLE_NAME>A1</SAMPLE_NAME>
+        <!--SEQ_LADDER, a sequence ladder is a list of all partial sequences that contain either terminus of a
+        biomolecule sequence.  This feature is useful for finding oligo failure sequences, for example.
+        ProMass reports the results of a sequence ladder search in the SEQ_LADDER element.  The SEQ_LADDER
+        attribute is MASS, which is the expected (calculated) mass.  Ladder masses are ONLY reported
+        for those masses that are found.-->
+        <SEQ_LADDER MASS="5205.4">
+            <!--INTENSITY, the deconvoluted intensity of the found mass-->
+            <INTENSITY>4.60E+004</INTENSITY> 
+            <!--MASS_ERROR, the mass error, observed minus expected mass-->
+            <MASS_ERROR>-0.5</MASS_ERROR>
+            <!--OBSERVED_MASS, experimentally observed seq_ladder mass-->
+            <OBSERVED_MASS>5204.9</OBSERVED_MASS>
+            <!--RT, retention time of the found ladder mass-->
+            <RT>0.29</RT>
+            <!--SEQUENCE, putative sequence of the found ladder-->
+            <SEQUENCE>C2-C18</SEQUENCE>
+        </SEQ_LADDER>
+        <!--STUDY, STUDY field from the sample list-->
+        <STUDY>867-5309</STUDY>
+        <!--TARGET_INFO, string from the Target Info field of the sample list-->
+        <TARGET_INFO>sequence = oligo, ladder=5'</TARGET_INFO>
+        <!--TARGET_MASS, elements present information about target masses that have been defined.
+        Target masses can be explicitly defined in the target info field of the sample list or
+        calculated from BioSequence strings.  Multiple target masses are possible. The MASS
+        attribute represents the expected target mass.-->
+        <TARGET_MASS MASS="5494.6">
+            <!--COLOR_CODE, the color code for this particular target mass - cyan, red, orange, purple, blue or green.-->
+            <COLOR_CODE>green</COLOR_CODE>
+            <!--IDENTITY, a string representing the identity of the found species.  Usually, this will indicate "Target Mass"
+            for a found component or "Not Found" if the target mass is not found.-->
+            <IDENTITY>Target Mass</IDENTITY>
+            <!--INTENSITY, the deconvoluted intensity of the found target mass-->
+            <INTENSITY>2.45E+005</INTENSITY>
+            <!--MASS_ERROR, the mass error, observed minus expected mass-->
+            <MASS_ERROR>-0.3</MASS_ERROR>
+            <!--OBSERVED_MASS, experimentally observed target mass-->
+            <OBSERVED_MASS>5494.3</OBSERVED_MASS>
+            <!--PURITY_ESTIMATE, the purity estimate is a percentage based on the TOTAL_ABUNDANCE corrected for "acceptable impurities" and
+            normalized by peak area percent.  For example, if a target mass with 50% total abundance has an acceptable M+Na impurity which is 10%, and
+            a CHROM_PEAK area percent of 20%, then the PURITY_ESTIMATE = (50+10)*0.2 = 12%.  The PURITY_ESTIMATE will often equal the
+            TOTAL_ABUNDANCE when single chromatographic peaks are present and no acceptable impurities are detected-->
+            <PURITY_ESTIMATE>59.10</PURITY_ESTIMATE>
+            <!--RESULT_CODE, result code index for this target mass, -1=cyan, 0=red, 1=orange, 2=purple, 3=blue, 4=green-->
+            <RESULT_CODE>4</RESULT_CODE>
+            <!--RT, retention time of the found target mass-->
+            <RT>0.29</RT>
+            <!--TOTAL_ABUNDANCE, the %total abundance of the target mass in the spectrum where found-->
+            <TOTAL_ABUNDANCE>59.1</TOTAL_ABUNDANCE>
+        </TARGET_MASS>
+        <!--UV_CHROM_GRAPHIC, name of the graphic file for the UV chromatogram-->
+        <UV_CHROM_GRAPHIC>oligo01_uv.png</UV_CHROM_GRAPHIC>
+        <!--ZNOVA_PARAMS, ZNova Params string, as entered in the sample list-->
+        <ZNOVA_PARAMS>-P &quot;C:\Program Files\ProMassXcali\TestData\oligos\oligo.PARAMS&quot; </ZNOVA_PARAMS>
+    </DATA_FILE>
+    <!--PROCESSING_COMPUTER_NAME, the computer name where the data processing was performed-->
+    <PROCESSING_COMPUTER_NAME>LTQ</PROCESSING_COMPUTER_NAME>
+    <!--PROCESSING_DATE_TIME, the date and time that the last file was processed for this sample list-->
+    <PROCESSING_DATE_TIME>Mon Mar 12 15:38:01 2007</PROCESSING_DATE_TIME>
+    <!--VERSION, the version of the software used to process this data set-->
+    <VERSION>ZNova #.#.#</VERSION>
+</PROMASS_RESULTS>

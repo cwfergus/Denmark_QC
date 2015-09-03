@@ -1,0 +1,98 @@
+/*ProMass CSS Template file*/
+
+body, td, p, th {
+  font-family: verdana, arial, helvetica sans-serif;
+  font-size: 9pt;
+  }
+    a:link {
+    text-decoration: none;
+    }
+    a:visited {
+    text-decoration: none;
+    }
+    a:hover {
+    text-decoration: underline;
+    }
+/* Table styles. */
+
+table {
+  border-color: silver;
+  border-spacing: 0px;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+}
+
+table.noborder {
+  border-style: none;
+}
+
+tr.noborder {
+  border-style: none;
+}
+
+td.noborder {
+  border-style: none;
+}
+
+td.numeric {
+  text-align: right;
+}
+
+th {
+  background-color: #c0c0c0;
+}
+
+th.mainHeader {
+  background-color: #c0c0c0;
+  color: #ffffff;
+  text-align: center;
+}
+
+th a {
+  color: #000080;
+  text-decoration: none;
+}
+
+th a:visited {
+  color: #000080;
+}
+
+th a:active, th a:hover {
+  color: #800000;
+  text-decoration: underline;
+}
+
+tr td {
+  border-style: solid;
+  border-width: 1px;
+  border-color: silver; 
+}
+
+tr.alternateRow {
+  background-color: #e0e0e0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: silver;
+}
+
+tr.altRowLeft {
+  background-color: #e0e0e0;
+  text-align: left;
+}
+
+tr.centered {
+  text-align: center;
+}
+
+td.sortedColumn {
+  background-color: #f0f0f0;
+}
+
+th.sortedColumn {
+  background-color: #b0b0b0;
+}
+
+tr.alternateRow td.sortedColumn {
+  background-color: #d0d0d0;
+}

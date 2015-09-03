@@ -1,0 +1,11 @@
+Mass Peak List Sorted by Intensity:
+Mass(Da)    +- Std. Dev.    Intensity    Score    Delta Mass   %Relative   %Total   Presumed Identity
+  5739.3         0.5        9.01E+003    11.82         0.0       100.00     95.72     Target Mass: 5738.8, A1-T19
+  5752.6         0.5        2.04E+002     3.27        13.3        2.26      2.17     
+  5762.8         0.2        1.99E+002     3.12        23.5        2.21      2.12     
+
+Mass Peak List Sorted by Mass:
+Mass(Da)    +- Std. Dev.    Intensity    Score    Delta Mass   %Relative   %Total   Presumed Identity
+  5739.3         0.5        9.01E+003    11.82         0.0       100.00     95.72     Target Mass: 5738.8, A1-T19
+  5752.6         0.5        2.04E+002     3.27        13.3        2.26      2.17     
+  5762.8         0.2        1.99E+002     3.12        23.5        2.21      2.12     

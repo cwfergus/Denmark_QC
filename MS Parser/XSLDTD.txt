@@ -1,0 +1,90 @@
+XSLDTD
+
+Described below is how the XML file should look from a correct run.
+This is a modified version of the ProMassDTD, with comments removed.
+Fields of interest have had their example changed to the name of a Filemaker Fields
+Green are fields that are fed in with the worklist, but also show up in results
+Purple are fields that come out only in the results file
+
+ 
+
+<?xml version='1.0' standalone='yes'?>
+<!--PROMASS_RESULTS is the root node of document
+The following elements are not optional and should always be present:
+DATA_FILE - one or more
+    CHROM_PEAK - one or more, including all CHROM_PEAK children
+    COLOR_CODE
+    DATA_PATH
+    DETECTOR_TYPE
+    MS_CHROM_GRAPHIC
+    PROC_METHOD
+    RESULTS_PATH
+    RESULT_CODE
+PROCESSING_COMPUTER_NAME
+PROCESSING_DATE_TIME
+VERSION
+
+All other elements are optional, depending on the how the sample list was configured during processing.
+The following optional DATA_FILE children can appear more than once:
+    TARGET_MASS - one or more target masses with all TARGET_MASS children
+    SEQ_LADDER - one or more found sub-sequence masses with all SEQ_LADDER children
+-->
+<PROMASS_RESULTS>
+	<DATA_FILE ID="1" NAME="ProdNum">
+     <ACQ_DATE>"TestDate"</ACQ_DATE>
+        <AD_CHROM_GRAPHIC>unused</AD_CHROM_GRAPHIC>
+        <BIOSEQUENCE>"SEQUENCE"</BIOSEQUENCE>
+        <CHROM_PEAK RT="0.29">
+            <AREA_PERCENT>100.00</AREA_PERCENT>
+            <BASE_PEAK_INTENSITY>2.45E+005</BASE_PEAK_INTENSITY>
+            <BASE_PEAK_MASS>5494.3</BASE_PEAK_MASS>
+            <DECON_DATA>oligo01_0_29.dec</DECON_DATA>
+            <DECON_PEAK_REPORT>oligo01_0_29.cent.txt</DECON_PEAK_REPORT>
+            <DEC_GRAPHIC>oligo01_0_29.dec.png</DEC_GRAPHIC>
+            <ESI_GRAPHIC>oligo01_0_29.png</ESI_GRAPHIC>             
+            <LOG_FILE>oligo01_0_29.log.txt</LOG_FILE>
+            <PEAK_AREA>2.08E+007</PEAK_AREA>
+            <SPECTRAL_QUALITY>ok</SPECTRAL_QUALITY>
+            <ZOOM_GRAPHIC>oligo01_0_29.zdec.png</ZOOM_GRAPHIC>
+        </CHROM_PEAK>
+        <CLIENT>"SO"</CLIENT>
+        <COLOR_CODE>green</COLOR_CODE>
+        <COMMENT></COMMENT>
+        <DATA_PATH>C:\Program Files\ProMassXcali\TestData\"ESScnBC"</DATA_PATH>
+        <DETECTOR_TYPE>LC/MS</DETECTOR_TYPE>
+        <INJ_VOL>"InjVol"</INJ_VOL> 
+        <INST_METHOD>"InstrMethod"</INST_METHOD>
+        <MS_CHROM_GRAPHIC>oligo01_ms.png</MS_CHROM_GRAPHIC>
+        <POSITION>1</POSITION>
+        <PROC_METHOD>C:\Program Files\ProMassXcali\TestData\oligos\oligo</PROC_METHOD>
+        <RESULTS_PATH>C:\Program Files\ProMassXcali\TestData\"ESScnBC"\promass_results</RESULTS_PATH>
+        <RESULT_CODE>4</RESULT_CODE>
+        <SAMPLE_ID>"ProdNum"</SAMPLE_ID>
+        <SAMPLE_NAME>"WELL"</SAMPLE_NAME>
+        <SEQ_LADDER MASS="5205.4">
+            <INTENSITY>4.60E+004</INTENSITY> 
+            <MASS_ERROR>-0.5</MASS_ERROR>
+            <OBSERVED_MASS>5204.9</OBSERVED_MASS>
+            <RT>0.29</RT>
+            <SEQUENCE>C2-C18</SEQUENCE>
+        </SEQ_LADDER>
+        <STUDY>"SSID"</STUDY>
+        <TARGET_INFO>sequence = oligo, ladder=5'</TARGET_INFO>
+        <TARGET_MASS MASS="TestGoal">
+            <COLOR_CODE>green</COLOR_CODE>
+            <IDENTITY>Target Mass</IDENTITY>
+            <INTENSITY>2.45E+005</INTENSITY>
+            <MASS_ERROR>-0.3</MASS_ERROR>
+            <OBSERVED_MASS>"TestResult"</OBSERVED_MASS>
+            <PURITY_ESTIMATE>59.10</PURITY_ESTIMATE>
+            <RESULT_CODE>4</RESULT_CODE>
+            <RT>0.29</RT>
+            <TOTAL_ABUNDANCE>"Area"</TOTAL_ABUNDANCE>
+        </TARGET_MASS>
+        <UV_CHROM_GRAPHIC>oligo01_uv.png</UV_CHROM_GRAPHIC>
+        <ZNOVA_PARAMS>-P &quot;C:\Program Files\ProMassXcali\TestData\oligos\oligo.PARAMS&quot; </ZNOVA_PARAMS>
+    </DATA_FILE>
+    <PROCESSING_COMPUTER_NAME>"Intr"</PROCESSING_COMPUTER_NAME>
+    <PROCESSING_DATE_TIME>"TestTime"</PROCESSING_DATE_TIME>
+    <VERSION>ZNova #.#.#</VERSION>
+</PROMASS_RESULTS>
